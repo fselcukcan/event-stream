@@ -4,4 +4,7 @@ es.addEventListener("negotiationneeded", e => console.log("negotiationneeded. on
 es.addEventListener("click", e => console.log("click happened. 2nd handler called. event.detail: ", e.detail))
 
 var clickEvent = new CustomEvent("click", { detail: 7 })
+var clickEvent_ = { type: "click", detail: 8 }
+
 es.dispatchEvent(clickEvent)
+es.dispatchEvent(clickEvent_)
