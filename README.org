@@ -5,9 +5,9 @@
 ** Some features
 event stream implementation from scratch with a functional programming approach.
 
-no dependencies exist. even [[EventTarget][https://dom.spec.whatwg.org/#interface-eventtarget]] standard class is not used.
+no dependencies exist. even [[https://dom.spec.whatwg.org/#interface-eventtarget][EventTarget]] standard class is not used.
 
-events dispatched do not have to be standard JavaScript [[Event][https://dom.spec.whatwg.org/#event]] or [[CustomEvent][https://dom.spec.whatwg.org/#customevent]] objects.
+events dispatched do not have to be standard JavaScript [[https://dom.spec.whatwg.org/#event][Event]] or [[https://dom.spec.whatwg.org/#customevent][CustomEvent]] objects.
 
 any object can be used instead provided having a type property.
 
