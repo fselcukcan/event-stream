@@ -4,9 +4,13 @@
 
 ** Some features
 event stream implementaiton from scratch with a functional programming approach.
+
 no dependencies exist. EventTarget standard class is not used.
+
 events dispatched do not have to be standard JavaScript Event or CustomEvent objects.
+
 any object can be used instead provided having a type property.
+
 standard JavaScript event function naming is kept for convenience but prone to change till stable.
 
 #+begin_src javascript
