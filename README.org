@@ -7,3 +7,18 @@
 * events dispatched do not have to be standard JavaScript Event or CustomEvent objects.
 * any object can be used instead provided having a type property.
 * standard JavaScript event function naming is kept for convenience but prone to change till stable.
+
+#+begin_src javascript
+es = makeEventStream()
+es.addEventListener("click", e => console.log("click happened. 1st handler called. event: ", e))
+es.addEventListener("negotiationneeded", e => console.log("negotiationneeded. only handler called. event: ", e))
+es.addEventListener("click", e => console.log("click happened. 2nd handler called. event.detail: ", e.detail))
+
+var clickEvent = new CustomEvent("click", { detail: 7 })
+var clickEvent_ = { type: "click", detail: 8 }
+
+es.dispatchEvent(clickEvent)
+es.dispatchEvent(clickEvent_)
+#+end_src
+
+#+RESULTS:
