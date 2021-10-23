@@ -1,1 +1,1 @@
-export * from "./event-stream.js"
+export { default } from "./event-stream.js"
