@@ -3,7 +3,7 @@
 #+date: 23.10.2020
 
 ** Some features
-event stream implementaiton from scratch with a functional programming approach.
+event stream implementation from scratch with a functional programming approach.
 
 no dependencies exist. EventTarget standard class is not used.
 
