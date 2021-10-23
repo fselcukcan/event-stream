@@ -10,12 +10,12 @@ export default function makeEventStream() {
   function dispatchEvent(event) {
     listeners
       .filter(listener => listener.type === event.type)
-      .map(listener => listener.callback)
-      .reduce((acc, callback) => [...acc, callback(event)], [])
+      .map(listener => listener.callback) // callback default value be identity function so no type error in next map
+      .map(callback => callback(event))
   }
   return {
-    addEventListener,
-    removeEventListener,
-    dispatchEvent,
+    subscribe: addEventListener,
+    unsubscribe: removeEventListener,
+    emit: dispatchEvent,
   }
 }

@@ -29,4 +29,4 @@ es.dispatchEvent(clickEvent_)
 #+RESULTS:
 
 ** todo
-*** TODO add subscribe mechanism for external code
+*** DONE add subscribe mechanism for external code
