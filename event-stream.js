@@ -10,7 +10,7 @@ export default function makeEventStream() {
   function dispatchEvent(event) {
     listeners
       .filter(listener => listener.type === event.type)
-      .map(listener => listener.callback) // callback default value be identity function so no type error in next map
+      .map(listener => listener.callback) // callback default value be identity function so no type error in next map, or filter non function ones here or there.
       .map(callback => callback(event))
   }
   return {
