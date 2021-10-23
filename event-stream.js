@@ -1,4 +1,4 @@
-function makeEventStream() {
+export default function makeEventStream() {
   var listeners = []
   function addEventListener(type, callback) {
     listeners.push({ type, callback })
