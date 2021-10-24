@@ -2,7 +2,7 @@ export default function makeEventStream() {
   var listeners = []
   function addEventListener(type, callback) {
     listeners.push({ type, callback })
-    return listeners
+    return { type, callback }
   }
   function removeEventListener(type, callback) {
     return listeners.filter(listener => listener.type === type && listener.callback === callback)
