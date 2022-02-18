@@ -5,7 +5,7 @@ export default function makeEventStream() {
     return { type, callback }
   }
   function removeEventListener(type, callback) {
-    return listeners.filter(listener => listener.type === type && listener.callback === callback)
+    return listeners.filter(listener => listener.type === type && listener.callback === callback); // Don't know why I have not as well deleted it from listeners array 
   }
   function dispatchEvent(event) {
     return listeners
