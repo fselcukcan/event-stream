@@ -15,15 +15,15 @@ standard JavaScript event function naming is kept for convenience but prone to c
 
 #+begin_src javascript
 es = makeEventStream()
-es.addEventListener("click", e => console.log("click happened. 1st handler called. event: ", e))
-es.addEventListener("negotiationneeded", e => console.log("negotiationneeded. only handler called. event: ", e))
-es.addEventListener("click", e => console.log("click happened. 2nd handler called. event.detail: ", e.detail))
+es.subscribe("click", e => console.log("click happened. 1st handler called. event: ", e))
+es.subscribe("negotiationneeded", e => console.log("negotiationneeded. only handler called. event: ", e))
+es.subscribe("click", e => console.log("click happened. 2nd handler called. event.detail: ", e.detail))
 
 var clickEvent = new CustomEvent("click", { detail: 7 })
 var clickEvent_ = { type: "click", detail: 8 }
 
-es.dispatchEvent(clickEvent)
-es.dispatchEvent(clickEvent_)
+es.emit(clickEvent)
+es.emit(clickEvent_)
 #+end_src
 
 #+RESULTS:
